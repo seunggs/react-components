@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "outDir": "dist",
+    "target": "es2016",
+    "jsx": "react",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "pretty": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "include": ["index.ts", "src"],
+  "exclude": ["node_modules", "dist"]
+}
