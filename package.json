@@ -23,6 +23,7 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
+    "ramda": "^0.28.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
@@ -30,6 +31,7 @@
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
     "np": "^7.6.1",
+    "ramda": "^0.28.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "tslint": "^6.1.3",

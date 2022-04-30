@@ -1,14 +1,22 @@
 import * as React from 'react'
-import { Children } from 'react'
+import { Children, ReactNode } from 'react'
+import * as R from 'ramda'
 import Tag from '../Tag'
 
+interface AlertProps {
+  children: ReactNode,
+  size?: string,
+  tag?: ReactNode,
+  className?: string,
+}
+
 const Alert = ({
-  size = 'default',
-  tagText,
-  className = '',
   children,
+  size = 'default',
+  tag,
+  className = '',
   ...rest
-}) => {
+}: AlertProps) => {
   const sizeClassNameMap = {
     default: 'space-x-2 px-3 py-2 text-sm'
   }
@@ -16,7 +24,7 @@ const Alert = ({
 
   return (
     <div className={`flex items-start rounded-2xl ${sizeClassName} ${className}`} {...rest}>
-      {tagText && <div className="shrink-0" style={{ marginTop: '1px' }}><Tag>{tagText}</Tag></div>}
+      {tag && <div className="shrink-0" style={{ marginTop: '1px' }}>{tag}</div>}
       <div className="flex-auto space-y-1">{Children.map(children, (child, i) => (
         <div key={i}>{child}</div>
       ))}</div>
