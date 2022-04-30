@@ -23,8 +23,7 @@ const Tag = ({
   const sizeClassName = sizeClassNameMap[size]
 
   return (
-    <div
-      className={`border rounded-md ${sizeClassName} ${className}`} {...rest}>{children}</div>
+    <div className={`border rounded-md ${borderColorClassName} ${textColorClassName} ${sizeClassName} ${className}`} {...rest}>{children}</div>
   )
 }
 

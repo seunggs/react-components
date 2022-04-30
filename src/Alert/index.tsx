@@ -1,7 +1,5 @@
 import * as React from 'react'
 import { Children, ReactNode } from 'react'
-import * as R from 'ramda'
-import Tag from '../Tag'
 
 interface AlertProps {
   children: ReactNode,
