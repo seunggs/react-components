@@ -1,8 +1,8 @@
 {
-  "name": "react-components",
+  "name": "@sidetrek/react-components",
   "description": "",
   "version": "0.0.1",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "private": false,
   "publishConfig": {
     "access": "public"
