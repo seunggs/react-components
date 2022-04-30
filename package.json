@@ -7,9 +7,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "/dist"
-  ],
   "np": {
     "contents": "./dist",
     "yarn": false
@@ -18,6 +15,10 @@
     "build": "rm -rf dist && npx tsc -p . && cp ./package.json ./dist/package.json",
     "release": "npm run build && npx np --any-branch",
     "test": "echo \"No test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seunggs/react-components.git"
   },
   "author": "",
   "license": "ISC",

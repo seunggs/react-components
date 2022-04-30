@@ -1,1 +1,1 @@
-# Pulumi Component Resources
+# React Components
