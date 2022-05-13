@@ -12,6 +12,8 @@
     "yarn": false
   },
   "scripts": {
+    "components-app": "npm start --prefix components-app",
+    "dev": "npx concurrently \"tsc --watch -p .\" \"npm run components-app\"",
     "build": "rm -rf dist && npx tsc -p . && cp ./package.json ./dist/package.json",
     "release": "npm run build && npx np --any-branch",
     "test": "echo \"No test specified\""
@@ -30,11 +32,15 @@
   "devDependencies": {
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
+    "concurrently": "^7.1.0",
     "np": "^7.6.1",
     "ramda": "^0.28.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "tslint": "^6.1.3",
     "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.6.1"
   }
 }

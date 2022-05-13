@@ -3,27 +3,33 @@ import { ReactNode } from 'react'
 
 interface TagProps {
   children: ReactNode,
+  kind?: string,
   size?: string,
-  borderColorClassName?: string,
-  textColorClassName?: string,
+  color?: string, // same as Tailwind css colors
   className?: string,
 }
 
 const Tag = ({
   children,
+  kind = 'solid', // solid | outline
   size = 'default',
-  borderColorClassName = 'border-rose-500',
-  textColorClassName = 'text-rose-500',
+  color = 'gray',
   className = '',
   ...rest
 }: TagProps) => {
   const sizeClassNameMap = {
-    default: 'font-bold px-1 py-0.5 text-xs leading-3'
+    default: 'font-medium px-2.5 py-0.5 text-xs'
   }
   const sizeClassName = sizeClassNameMap[size]
 
+  const colorClassNameMap = {
+    solid: `bg-${color}-100 text-${color}-800`,
+    outline: `border border-${color}-800 text-${color}-800`, 
+  }
+  const colorClassName = colorClassNameMap[kind]
+
   return (
-    <div className={`inline-block border rounded-md ${borderColorClassName} ${textColorClassName} ${sizeClassName} ${className}`} {...rest}>{children}</div>
+    <div className={`inline-flex items-center rounded-full ${colorClassName} ${sizeClassName} ${className}`} {...rest}>{children}</div>
   )
 }
 
